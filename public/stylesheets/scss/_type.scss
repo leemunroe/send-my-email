@@ -1,0 +1,107 @@
+body {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size:100%;
+  line-height:1.6;
+}
+
+blockquote {
+  font-style: italic;
+  font-weight: 400;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  padding-left: 25px;
+  font-size: 1.4em;
+  margin: 0 0 $padding/2;
+  border-left:2px solid $primary-color;
+}
+
+h1,h2,h3,h4,h5{
+  font-family: "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+h1 {
+  font-size: 68px;
+  margin: 0 0 25px;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 42px;
+  margin: 0 0 25px;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: 26px;
+  margin: 0 0 25px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h4 {
+  font-size: 18px;
+  margin: 0 0 25px;
+  font-weight: 700;
+  font-style: normal;
+}
+
+h5 {
+  font-size: 16px;
+  margin: 0 0 25px;
+  font-style: normal;
+  font-weight: normal;
+}
+
+p {
+  margin: 0 0 $padding/2;
+}
+
+pre{
+  font-family:Monaco, Menlo, Consolas, "Courier New", monospace;
+  margin:0 0 $padding/2;
+  padding:10px;
+  background:#f5f5f5;
+  border:1px solid rgba(0,0,0,.1);
+  @include border-radius(5px);
+  display:block;
+  font-size: 13px;
+  line-height: 20px;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+
+// Responsive styles if needed
+// @include responsive($big-break) {
+// }
+@include responsive($small-break) {
+  body{
+    font-size:14px;
+  }
+  h1,h2,h3,h4,h5{
+    margin-bottom:10px;
+  }
+  h1{
+    font-size:26px;
+  }
+  h2{
+    font-size:18px;
+  }
+  h3{
+    font-size:16px;
+  }
+  h4,h5,p,ul,ol{
+    font-size:14px;
+  }
+}
+
+// Mobile first styles if needed
+// @include mobilefirst($big-break) {
+// }
+// @include mobilefirst($small-break) {
+// }
