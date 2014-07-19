@@ -8,7 +8,7 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
-app.set('layout', 'layout') // defaults to 'layout'
+app.set('layout', 'layout'); // defaults to 'layout'
 
 app.use(require('node-compass')({mode: 'expanded'}));
 app.use(express.static(__dirname + '/public'));

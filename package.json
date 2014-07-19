@@ -1,7 +1,6 @@
 {
   "name": "myapp",
   "version": "0.0.1",
-  "private": true,
   "engines": {
     "node": "0.10.26",
     "npm": "1.4.20"
