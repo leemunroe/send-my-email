@@ -5,7 +5,7 @@ var expressLayouts = require('express-ejs-layouts');
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', __dirname + '/views');
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 app.set('layout', 'layout'); // defaults to 'layout'
