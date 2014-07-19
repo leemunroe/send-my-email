@@ -43,11 +43,11 @@ app.post('/', function(req, res) {
     console.log(body);
     //Email not sent
       if (error) {
-          res.render('index', { title: 'No Email', msg: 'Error', err: true })
+          res.render('index', { title: 'No Email', msg: 'Error. Something went wrong.', err: true })
       }
       //Yay!! Email sent
       else {
-          res.render('index', { title: 'Sent Email', msg: 'Yay!', err: false })
+          res.render('index', { title: 'Sent Email', msg: 'Yay! Message successfully sent.', err: false })
       }
   });
 
