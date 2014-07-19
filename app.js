@@ -49,7 +49,5 @@ app.post('/', function(req, res) {
 
 });
 
-var port = Number(process.env.PORT || 5000);
-app.listen(port, function() {
-  console.log("Listening on " + port);
-});
+var port = process.env.PORT || CONFIG.port;
+app.listen(port);
