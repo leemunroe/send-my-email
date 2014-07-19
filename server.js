@@ -1,5 +1,4 @@
 var express = require('express');
-var morgan = require('morgan')
 var bodyParser = require('body-parser');
 var path = require('path');
 var expressLayouts = require('express-ejs-layouts');
