@@ -11,7 +11,8 @@ app.set('view engine', 'html');
 app.set('layout', 'layout'); // defaults to 'layout'
 
 app.use(require('node-compass')({mode: 'expanded'}));
-app.use(express.static(__dirname + '/public'));
+// app.use(express.static(__dirname + '/public'));
+app.use(express['static'](path.join(__dirname, 'public')));
 app.use(expressLayouts);
 app.use(bodyParser.urlencoded({ extended: false }));
 
