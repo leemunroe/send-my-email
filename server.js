@@ -30,11 +30,21 @@ app.post('/', function(req, res) {
 
   var mailgun = new Mailgun({apiKey: api_key, domain: domain});
 
+  // var recipients = req.body.to.split(',');
+  // var recipientsLength = recipients.length;
+  // var recipientVars
+  // for (var i = 0; i < recipientsLength; i++) {
+  //   recipientVars += '"recipients[i]": {},'
+  // }
+
   var data = {
     from: req.body.myname +"<"+req.body.email+">",
     to: req.body.to,
+    'recipient-variables': '{}',
     subject: req.body.subject,
-    html: req.body.html
+    html: req.body.html,
+    text: req.body.plaintext,
+    'o:tag': req.body.tag
   };
   console.log(req.body);
   mailgun.messages().send(data, function (error, body) {

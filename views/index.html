@@ -12,7 +12,7 @@
 <% } %>
 
 <form action="/" method="post" name="sendemail" id="sendemail">
-  <div class="inline-fields">
+  <div class="group">
     <div class="field span3">
       <label for="key">Mailgun API Key</label>
       <input type="text" id="key" name="key" autofocus>
@@ -22,33 +22,55 @@
       <input type="text" id="mydomain" name="mydomain">
     </div>
   </div>
-  <div class="inline-fields">
+
+  <div class="group">
     <div class="field span3">
-      <label for="email">Your email</label>
+      <label for="email">Sender email</label>
       <input type="email" id="email" name="email">
     </div>
     <div class="field span3">
-      <label for="myname">Your name</label>
+      <label for="myname">Sender name</label>
       <input type="text" id="myname" name="myname">
     </div>
   </div>
-  <div class="inline-fields">
-    <div class="field span3">
-      <label for="to">Send to (email)</label>
-      <input type="email" id="to" name="to">
-    </div>
-    <div class="field span3">
+
+  <div class="group">
+    <div class="field span6">
       <label for="subject">Subject</label>
       <input type="text" id="subject" name="subject">
     </div>
   </div>
-  <div class="inline-fields">
+
+  <div class="group">
     <div class="field span6">
-      <label for="html">Email content (HTML)</label>
+      <label for="subject">Tag</label>
+      <input type="text" id="tag" name="tag" autofocus>
+    </div>
+  </div>
+
+  <div class="group">
+    <div class="field span6">
+      <label for="to">Recipient(s)</label>
+      <textarea id="to" name="to"></textarea>
+      <!--<button class="btn-secondary"><i class="icon-download-alt"></i> Import Latest Mailing List</button>-->
+    </div>
+  </div>
+
+  <div class="group">
+    <div class="field span6">
+      <label for="html">HTML Body</label>
       <textarea id="html" name="html"></textarea>
     </div>
   </div>
-  <div class="actions">
+
+  <div class="group">
+    <div class="field span6">
+      <label for="plaintext">Plain Text Body</label>
+      <textarea id="plaintext" name="plaintext"></textarea>
+    </div>
+  </div>
+
+  <div class="clear actions">
     <button type="submit" class="btn-primary">Send email</button>
   </div>
 </form>
@@ -59,8 +81,8 @@
   <li>CSS inliner</li>
   <li>Mobile preview</li>
   <li>cc,bcc,reply to</li>
-  <li>Batch sending</li>
   <li>Populate domain dropdown</li>
   <li>Deliverability tips</li>
-  <li>Text version</li>
+  <li>Tags, campaigns</li>
+  <li>Import list</li>
 </ul>
